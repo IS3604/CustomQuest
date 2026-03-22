@@ -4,8 +4,26 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CustomQuest — Design Agency</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>CustomQuest – Web Design & App UI Agency in India | Starting ₹699</title>
+  <meta name="description"
+    content="CustomQuest is India's affordable web design agency. We build custom websites, portfolios & app UI designs starting at just ₹699. Contact us today!" />
+  <meta name="keywords"
+    content="web design India, affordable web design, portfolio website, app UI design, SEO management, custom website India" />
+  <meta name="author" content="CustomQuest" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://customquest.in/" />
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://customquest.in/" />
+  <meta property="og:title" content="CustomQuest – Web Design & App UI Agency in India | Starting ₹699" />
+  <meta property="og:description"
+    content="CustomQuest is India's affordable web design agency. We build custom websites, portfolios & app UI designs starting at just ₹699. Contact us today!" />
+  <meta property="og:site_name" content="CustomQuest" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CustomQuest – Web Design & App UI Agency in India | Starting ₹699" />
+  <meta name="twitter:description"
+    content="CustomQuest is India's affordable web design agency. We build custom websites, portfolios & app UI designs starting at just ₹699." />
   <!-- Firebase SDK -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
@@ -450,7 +468,60 @@
       align-items: center;
       justify-content: center;
     }
+
+    /* Responsive: mobile adjustments */
+    @media (max-width: 768px) {
+      nav {
+        padding: 16px 20px !important;
+      }
+
+      nav a[href*="wa.me"] {
+        display: none !important;
+      }
+
+      main {
+        padding: 40px 20px !important;
+      }
+
+      main>div {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+      }
+
+      section {
+        padding: 48px 20px !important;
+      }
+
+      footer {
+        padding: 40px 20px 24px !important;
+      }
+
+      footer>div>div:first-child {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav button {
+        padding: 9px 16px !important;
+        font-size: 13px !important;
+      }
+    }
   </style>
+  <!-- Structured Data (Schema Markup) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "CustomQuest",
+    "url": "https://customquest.in",
+    "telephone": "+91-97555-88752",
+    "priceRange": "₹₹",
+    "description": "Affordable web design, portfolio & app UI agency in India",
+    "areaServed": "India"
+  }
+  </script>
 </head>
 
 <body>
@@ -459,7 +530,7 @@
   <div class="page active" id="page1">
     <!-- Nav -->
     <nav
-      style="display:flex;align-items:center;justify-content:space-between;padding:20px 32px;background:white;border-bottom:1.5px solid var(--border);">
+      style="display:flex;align-items:center;justify-content:space-between;padding:20px 32px;background:white;border-bottom:1.5px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);">
       <div style="display:flex;align-items:center;gap:10px;">
         <div
           style="background:var(--primary);padding:10px;border-radius:12px;display:flex;align-items:center;justify-content:center;">
@@ -470,12 +541,22 @@
         </div>
         <span style="font-size:20px;font-weight:800;letter-spacing:-0.03em;">CustomQuest</span>
       </div>
-      <div style="display:flex;align-items:center;gap:32px;">
+      <div style="display:flex;align-items:center;gap:16px;">
+        <a href="https://wa.me/919755588752" target="_blank" rel="noopener"
+          style="display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;color:var(--muted);text-decoration:none;padding:8px 16px;border-radius:100px;border:1.5px solid var(--border);background:white;transition:all 0.18s;"
+          onmouseover="this.style.borderColor='#25D366';this.style.color='#25D366';this.style.background='#f0fdf4';"
+          onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)';this.style.background='white';">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#25D366">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          WhatsApp
+        </a>
       </div>
     </nav>
 
     <!-- Hero -->
-    <main style="flex:1;display:flex;align-items:center;padding:48px 32px;" class="mobile-wrap-lg" style="width:100%;">
+    <main style="flex:1;display:flex;align-items:center;padding:64px 32px;background:white;">
       <div
         style="max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
         <!-- Left -->
@@ -506,6 +587,17 @@
             </button>
           </div>
 
+          <!-- Trust stats -->
+          <div style="display:flex;gap:32px;flex-wrap:wrap;padding-top:8px;border-top:1.5px solid var(--border);">
+            <div class="stat-card">
+              <span style="font-size:22px;font-weight:800;letter-spacing:-0.03em;color:var(--text);">100%</span>
+              <span style="font-size:12px;color:var(--muted);font-weight:600;">Client Satisfaction</span>
+            </div>
+            <div class="stat-card">
+              <span style="font-size:22px;font-weight:800;letter-spacing:-0.03em;color:var(--text);">3 Days</span>
+              <span style="font-size:12px;color:var(--muted);font-weight:600;">Avg. Delivery</span>
+            </div>
+          </div>
 
         </div>
 
@@ -574,7 +666,7 @@
 
 
     <!-- ── SAMPLE PORTFOLIO SHOWCASE ── -->
-    <section style="background:var(--bg);padding:64px 32px;">
+    <section style="background:var(--bg);padding:72px 32px;">
       <div style="max-width:1200px;margin:0 auto;">
 
         <!-- Header -->
@@ -736,129 +828,220 @@
       </div>
     </section>
 
-    <!-- Promo footer -->
-    <footer style="background:white;border-top:1.5px solid var(--border);padding:36px 32px;">
+    <!-- ── NEW PACKAGES OFFER ── -->
+    <section style="background:white;padding:72px 32px 56px;border-top:1.5px solid var(--border);">
       <div style="max-width:1200px;margin:0 auto;">
-        <p class="label" style="text-align:center;margin:0 0 24px;">What we craft for you</p>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;">
 
-          <!-- Card 1: Website -->
-          <div
-            style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:1.5px solid #fed7aa;border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:12px;">
+        <!-- Header row -->
+        <div
+          style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:32px;">
+          <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
             <div
-              style="width:44px;height:44px;background:var(--primary);border-radius:14px;display:flex;align-items:center;justify-content:center;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
-                stroke-linecap="round">
-                <circle cx="12" cy="12" r="10" />
-                <line x1="2" y1="12" x2="22" y2="12" />
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              style="display:inline-flex;align-items:center;gap:6px;background:var(--primary);color:white;padding:6px 14px;border-radius:100px;font-size:11px;font-weight:800;letter-spacing:0.08em;">
+              🔥 NEW LAUNCH
+            </div>
+            <span style="font-size:clamp(18px,2.5vw,26px);font-weight:800;letter-spacing:-0.02em;">Introducing Our New
+              Packages</span>
+          </div>
+          <span style="font-size:14px;font-style:italic;color:var(--muted);">Simple pricing. Zero compromise.</span>
+        </div>
+
+        <!-- Three package cards -->
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:20px;">
+
+          <!-- Card 1: Portfolio Website -->
+          <div
+            style="background:white;border:1.5px solid var(--border);border-radius:20px;padding:28px 24px;display:flex;flex-direction:column;gap:14px;transition:all 0.2s;"
+            onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(236,91,19,0.12)';this.style.borderColor='var(--primary)'"
+            onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='var(--border)'">
+            <div
+              style="width:44px;height:44px;background:var(--primary-light);border-radius:12px;display:flex;align-items:center;justify-content:center;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
               </svg>
             </div>
             <div>
-              <div style="font-size:16px;font-weight:800;color:#7c2d12;margin-bottom:4px;">Custom Websites</div>
-              <p style="font-size:13px;color:#c2410c;line-height:1.6;margin:0;">Pixel-perfect, brand-first websites
-                built from scratch — fast, responsive, and built to convert visitors into clients.</p>
+              <div style="font-size:16px;font-weight:800;margin-bottom:6px;">Portfolio Website</div>
+              <p style="font-size:13px;color:var(--muted);line-height:1.6;margin:0;">Sleek, personal site to showcase
+                your work &amp; win opportunities.</p>
             </div>
-            <div style="display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--primary);">
-              Lowest in market @ ₹5,000
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M9 18l6-6-6-6" />
-              </svg>
+            <div style="font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-0.03em;color:var(--text);">
+              <span style="font-size:0.55em;vertical-align:super;font-weight:700;">₹</span>699
             </div>
           </div>
 
-          <!-- Card 2: Portfolio -->
+          <!-- Card 2: Web App / UI Design (highlighted) -->
           <div
-            style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:1.5px solid #fed7aa;border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:12px;">
+            style="background:var(--primary-light);border:2px solid var(--primary);border-radius:20px;padding:28px 24px;display:flex;flex-direction:column;gap:14px;transition:all 0.2s;position:relative;"
+            onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(236,91,19,0.2)'"
+            onmouseout="this.style.transform='';this.style.boxShadow=''">
             <div
-              style="width:44px;height:44px;background:var(--primary);border-radius:14px;display:flex;align-items:center;justify-content:center;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
-                stroke-linecap="round">
-                <rect x="3" y="3" width="7" height="7" rx="1" />
-                <rect x="14" y="3" width="7" height="7" rx="1" />
-                <rect x="3" y="14" width="7" height="7" rx="1" />
-                <rect x="14" y="14" width="7" height="7" rx="1" />
+              style="width:44px;height:44px;background:var(--primary);border-radius:12px;display:flex;align-items:center;justify-content:center;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
               </svg>
             </div>
             <div>
-              <div style="font-size:16px;font-weight:800;color:#7c2d12;margin-bottom:4px;">Portfolio Design</div>
-              <p style="font-size:13px;color:#c2410c;line-height:1.6;margin:0;">Make a lasting first impression. We
-                design sleek portfolios that showcase your best work and win you opportunities.</p>
+              <div style="font-size:16px;font-weight:800;margin-bottom:6px;">Web App / UI Design</div>
+              <p style="font-size:13px;color:var(--muted);line-height:1.6;margin:0;">Full-featured webapp or mobile UI
+                built for real users.</p>
             </div>
-            <div style="display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--primary);">
-              Lowest in market @ ₹5,000
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M9 18l6-6-6-6" />
-              </svg>
+            <div style="font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-0.03em;color:var(--primary);">
+              <span style="font-size:0.55em;vertical-align:super;font-weight:700;">₹</span>1299
             </div>
           </div>
 
-          <!-- Card 3: App UI -->
+          <!-- Card 3: SEO Management -->
           <div
-            style="background:linear-gradient(135deg,#fff7ed,#ffedd5);border:1.5px solid #fed7aa;border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:12px;">
+            style="background:white;border:1.5px solid var(--border);border-radius:20px;padding:28px 24px;display:flex;flex-direction:column;gap:14px;transition:all 0.2s;"
+            onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(236,91,19,0.12)';this.style.borderColor='var(--primary)'"
+            onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='var(--border)'">
             <div
-              style="width:44px;height:44px;background:var(--primary);border-radius:14px;display:flex;align-items:center;justify-content:center;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
-                stroke-linecap="round">
-                <rect x="5" y="2" width="14" height="20" rx="2" />
-                <line x1="12" y1="18" x2="12.01" y2="18" stroke-width="3" />
+              style="width:44px;height:44px;background:var(--primary-light);border-radius:12px;display:flex;align-items:center;justify-content:center;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                <line x1="11" y1="8" x2="11" y2="14" />
+                <line x1="8" y1="11" x2="14" y2="11" />
               </svg>
             </div>
             <div>
-              <div style="font-size:16px;font-weight:800;color:#7c2d12;margin-bottom:4px;">App UI Design</div>
-              <p style="font-size:13px;color:#c2410c;line-height:1.6;margin:0;">Beautiful, intuitive mobile interfaces
-                for iOS & Android. Designed for engagement, built for real users.</p>
+              <div style="font-size:16px;font-weight:800;margin-bottom:6px;">SEO Management</div>
+              <p style="font-size:13px;color:var(--muted);line-height:1.6;margin:0;">Rank higher, get discovered.
+                Monthly SEO handled for you.</p>
             </div>
-            <div style="display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--primary);">
-              Lowest in market @ ₹5,000
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M9 18l6-6-6-6" />
-              </svg>
+            <div style="font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-0.03em;color:var(--text);">
+              <span style="font-size:0.55em;vertical-align:super;font-weight:700;">₹</span>499
             </div>
           </div>
 
         </div>
-      </div>
 
-      <!-- Contact Bar -->
-      <div
-        style="max-width:1200px;margin:28px auto 0;padding-top:28px;border-top:1.5px solid var(--border);display:flex;justify-content:center;gap:clamp(16px,4vw,48px);flex-wrap:wrap;align-items:center;">
-        <!-- WhatsApp -->
-        <a href="https://wa.me/919755588752" target="_blank" rel="noopener noreferrer"
-          style="display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);padding:10px 20px;border-radius:100px;border:1.5px solid var(--border);background:white;transition:all 0.2s;font-weight:600;font-size:14px;"
-          onmouseover="this.style.borderColor='#25D366';this.style.color='#25D366';this.style.background='#f0fdf4';"
-          onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text)';this.style.background='white';">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366">
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-          </svg>
-          +91 97555 88752
-        </a>
-        <!-- Email -->
-        <a href="/cdn-cgi/l/email-protection#8ae3f9e2faf8efeffef9e3e4ede2babbbacaede7ebe3e6a4e9e5e7"
-          style="display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);padding:10px 20px;border-radius:100px;border:1.5px solid var(--border);background:white;transition:all 0.2s;font-weight:600;font-size:14px;"
-          onmouseover="this.style.borderColor='var(--primary)';this.style.color='var(--primary)';this.style.background='var(--primary-light)';"
-          onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text)';this.style.background='white';">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-            <polyline points="22,6 12,13 2,6" />
-          </svg>
-          <span class="__cf_email__"
-            data-cfemail="254c564d5557404051564c4b424d151415654248444c490b464a48">[email&#160;protected]</span>
-        </a>
-        <!-- Phone -->
-        <a href="tel:+919755588752"
-          style="display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);padding:10px 20px;border-radius:100px;border:1.5px solid var(--border);background:white;transition:all 0.2s;font-weight:600;font-size:14px;"
-          onmouseover="this.style.borderColor='#2563eb';this.style.color='#2563eb';this.style.background='#eff6ff';"
-          onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text)';this.style.background='white';">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path
-              d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.36-.36a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
-          </svg>
-          +91 97555 88752
-        </a>
+        <!-- Complete Growth Bundle banner -->
+        <div
+          style="background:var(--primary);border-radius:20px;padding:28px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;">
+          <div>
+            <div
+              style="font-size:11px;font-weight:800;letter-spacing:0.1em;color:rgba(255,255,255,0.7);margin-bottom:6px;">
+              ⚡ BEST VALUE — ALL 3 TOGETHER</div>
+            <div style="font-size:clamp(20px,2.5vw,26px);font-weight:800;color:white;margin-bottom:4px;">Complete Growth
+              Bundle</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.75);">Portfolio + Web App + SEO Management</div>
+          </div>
+          <div style="text-align:right;">
+            <div style="font-size:14px;color:rgba(255,255,255,0.6);text-decoration:line-through;margin-bottom:2px;">
+              ₹2,497</div>
+            <div
+              style="font-size:clamp(36px,5vw,52px);font-weight:800;color:white;letter-spacing:-0.03em;line-height:1;">
+              <span style="font-size:0.5em;vertical-align:super;">₹</span>1999
+            </div>
+            <div
+              style="font-size:12px;font-weight:800;color:rgba(255,255,255,0.85);letter-spacing:0.04em;margin-top:4px;">
+              YOU SAVE ₹498!</div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div style="text-align:center;margin-top:28px;">
+          <button onclick="goTo(2)" class="btn-primary"
+            style="width:auto;padding:16px 44px;font-size:16px;border-radius:100px;">
+            Get Started →
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background:var(--text);padding:48px 32px 32px;">
+      <div style="max-width:1200px;margin:0 auto;">
+
+        <!-- Top row: brand + tagline + CTA -->
+        <div
+          style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:40px;">
+          <div>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+              <div
+                style="background:var(--primary);padding:9px;border-radius:11px;display:flex;align-items:center;justify-content:center;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
+                  stroke-linecap="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                </svg>
+              </div>
+              <span style="font-size:20px;font-weight:800;letter-spacing:-0.03em;color:white;">CustomQuest</span>
+            </div>
+            <p style="font-size:14px;color:rgba(255,255,255,0.55);margin:0;max-width:320px;line-height:1.6;">Your
+              vision. Our craft. Let's build something great together.</p>
+          </div>
+          <!-- Trust stats -->
+          <div style="display:flex;gap:28px;flex-wrap:wrap;justify-content:flex-end;">
+
+            <div style="text-align:center;">
+              <div style="font-size:28px;font-weight:800;color:var(--primary);letter-spacing:-0.03em;line-height:1;">
+                100%</div>
+              <div
+                style="font-size:11px;font-weight:600;color:rgba(255,255,255,0.45);margin-top:4px;letter-spacing:0.04em;text-transform:uppercase;">
+                Satisfaction</div>
+            </div>
+            <div style="width:1px;background:rgba(255,255,255,0.1);"></div>
+            <div style="text-align:center;">
+              <div style="font-size:28px;font-weight:800;color:var(--primary);letter-spacing:-0.03em;line-height:1;">3
+              </div>
+              <div
+                style="font-size:11px;font-weight:600;color:rgba(255,255,255,0.45);margin-top:4px;letter-spacing:0.04em;text-transform:uppercase;">
+                Day Delivery</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact links row -->
+        <div
+          style="border-top:1px solid rgba(255,255,255,0.1);padding-top:28px;display:flex;justify-content:center;gap:clamp(12px,3vw,36px);flex-wrap:wrap;align-items:center;margin-bottom:28px;">
+          <a href="https://wa.me/919755588752" target="_blank" rel="noopener noreferrer"
+            style="display:flex;align-items:center;gap:8px;text-decoration:none;color:rgba(255,255,255,0.7);font-size:14px;font-weight:600;transition:color 0.18s;"
+            onmouseover="this.style.color='#25D366'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            +91 97555 88752
+          </a>
+          <a href="mailto:customquest.in@gmail.com"
+            style="display:flex;align-items:center;gap:8px;text-decoration:none;color:rgba(255,255,255,0.7);font-size:14px;font-weight:600;transition:color 0.18s;"
+            onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            customquest.in@gmail.com
+          </a>
+          <a href="tel:+919755588752"
+            style="display:flex;align-items:center;gap:8px;text-decoration:none;color:rgba(255,255,255,0.7);font-size:14px;font-weight:600;transition:color 0.18s;"
+            onmouseover="this.style.color='#60a5fa'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.36-.36a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+            </svg>
+            +91 97555 88752
+          </a>
+        </div>
+
+        <!-- Bottom bar -->
+        <div
+          style="border-top:1px solid rgba(255,255,255,0.08);padding-top:20px;display:flex;align-items:center;justify-content:center;">
+          <p style="font-size:12px;color:rgba(255,255,255,0.3);margin:0;text-align:center;">© 2025 CustomQuest. All
+            rights reserved. · Digital Design Agency</p>
+        </div>
+
       </div>
     </footer>
   </div>
@@ -994,7 +1177,7 @@
         <!-- Purpose -->
         <div>
           <label class="label" style="display:block;margin-bottom:10px;">What is the purpose of this site?</label>
-          <textarea rows="3"
+          <textarea id="website-goal" rows="3"
             placeholder="e.g. A portfolio for my landscape photography business in Seattle."></textarea>
         </div>
 
