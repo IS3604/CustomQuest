@@ -63,6 +63,9 @@
       --text: #1a1714;
       --muted: #7a746e;
       --border: #ede9e4;
+      --glow: 0 0 40px rgba(236, 91, 19, 0.35);
+      --glass-bg: rgba(255, 255, 255, 0.7);
+      --glass-border: rgba(255, 255, 255, 0.5);
     }
 
     * {
@@ -508,6 +511,386 @@
         font-size: 13px !important;
       }
     }
+
+    /* Scroll Animations */
+    .scroll-anim {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .scroll-anim.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── ADVANCED ENHANCEMENTS ───────────────────────────────── */
+
+    /* Glassmorphism Nav */
+    #main-nav {
+      background: var(--glass-bg) !important;
+      backdrop-filter: blur(20px) saturate(180%) !important;
+      -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+      border-bottom: 1px solid var(--glass-border) !important;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+      transition: all 0.3s ease;
+    }
+
+    #main-nav.scrolled {
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Shimmer Button */
+    .btn-primary {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transform: skewX(-20deg);
+      animation: shimmer 3s infinite;
+    }
+
+    @keyframes shimmer {
+      0% {
+        left: -100%
+      }
+
+      60% {
+        left: 150%
+      }
+
+      100% {
+        left: 150%
+      }
+    }
+
+    /* Glow on primary button hover */
+    .btn-primary:hover {
+      box-shadow: var(--glow), 0 8px 24px rgba(236, 91, 19, 0.3);
+    }
+
+    /* Hero Section */
+    #hero-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Background Video */
+    #hero-bg-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      object-fit: cover;
+    }
+
+    /* Dark overlay for text readability */
+    #hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.72) 0%,
+        rgba(26, 13, 6, 0.65) 50%,
+        rgba(0, 0, 0, 0.58) 100%
+      );
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    #hero-canvas {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    #hero-left {
+      position: relative;
+      z-index: 2;
+    }
+
+    #hero-right {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Floating orbs */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      pointer-events: none;
+      animation: orbFloat linear infinite;
+      opacity: 0;
+    }
+
+    @keyframes orbFloat {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.18;
+      }
+
+      50% {
+        transform: translateY(-40px) scale(1.08);
+        opacity: 0.28;
+      }
+
+      100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.18;
+      }
+    }
+
+    /* Live Dot Pulse */
+    @keyframes livePulse {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(236, 91, 19, 0.5);
+      }
+
+      50% {
+        box-shadow: 0 0 0 6px rgba(236, 91, 19, 0);
+      }
+    }
+
+    .live-dot {
+      animation: livePulse 1.8s ease-in-out infinite;
+    }
+
+    /* Typewriter cursor */
+    .typewriter-cursor {
+      display: inline-block;
+      width: 3px;
+      height: 0.85em;
+      background: var(--primary);
+      vertical-align: middle;
+      margin-left: 4px;
+      border-radius: 2px;
+      animation: blink 0.9s step-end infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+    }
+
+    /* 3D Tilt Cards */
+    .tilt-card {
+      transform-style: preserve-3d;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .tilt-card:hover {
+      box-shadow: 0 24px 60px rgba(236, 91, 19, 0.18) !important;
+    }
+
+    /* Marquee Trust Strip */
+    .marquee-wrap {
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      white-space: nowrap;
+    }
+
+    .marquee-track {
+      display: flex;
+      gap: 0;
+      animation: marquee 28s linear infinite;
+      will-change: transform;
+    }
+
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .marquee-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 40px;
+      flex-shrink: 0;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 0.01em;
+    }
+
+    .marquee-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--primary);
+      opacity: 0.5;
+      flex-shrink: 0;
+    }
+
+    /* Stats Counter */
+    .stat-num {
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+
+    /* Review stars */
+    .star {
+      color: #f59e0b;
+      font-size: 15px;
+    }
+
+    /* Section accent line */
+    .section-accent {
+      width: 48px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), #ff8f4b);
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+
+    /* Gradient hero badge */
+    .hero-badge {
+      background: linear-gradient(135deg, var(--primary-light), #ffdecf);
+      border: 1px solid rgba(236, 91, 19, 0.2);
+      box-shadow: 0 4px 16px rgba(236, 91, 19, 0.1);
+    }
+
+    /* Portfolio card hover overlay */
+    .portfolio-img-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portfolio-img-wrap::after {
+      content: 'View Project →';
+      position: absolute;
+      inset: 0;
+      background: rgba(236, 91, 19, 0.85);
+      color: white;
+      font-weight: 800;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      letter-spacing: 0.02em;
+    }
+
+    .portfolio-card:hover .portfolio-img-wrap::after {
+      opacity: 1;
+    }
+
+    /* Scrolling progress indicator */
+    #scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), #ff8f4b);
+      z-index: 9999;
+      width: 0%;
+      transition: width 0.1s linear;
+      border-radius: 0 2px 2px 0;
+    }
+
+    /* Floating CTA bar */
+    #floating-cta {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 900;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      pointer-events: none;
+    }
+
+    #floating-cta.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    #floating-cta button {
+      background: var(--primary);
+      color: white;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 14px 24px;
+      border-radius: 100px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 32px rgba(236, 91, 19, 0.45);
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    #floating-cta button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(236, 91, 19, 0.55);
+    }
+
+    /* Gradient section divider */
+    .gradient-divider {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+      border: none;
+      margin: 0;
+    }
+
+    /* Testimonials section */
+    #testimonials {
+      background: linear-gradient(160deg, #1a0d06 0%, #2d150a 60%, #1a0d06 100%);
+      padding: 80px 32px;
+    }
+
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 28px;
+      backdrop-filter: blur(10px);
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(236, 91, 19, 0.4);
+    }
   </style>
   <!-- Structured Data (Schema Markup) -->
   <script type="application/ld+json">
@@ -529,7 +912,10 @@
   <!-- ─────────── PAGE 1: LANDING ─────────── -->
   <div class="page active" id="page1">
     <!-- Nav -->
-    <nav
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <nav id="main-nav"
       style="display:flex;align-items:center;justify-content:space-between;padding:20px 32px;background:white;border-bottom:1.5px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);">
       <div style="display:flex;align-items:center;gap:10px;">
         <div
@@ -555,21 +941,49 @@
       </div>
     </nav>
 
+    <!-- Floating CTA -->
+    <div id="floating-cta">
+      <button onclick="goTo(2)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+        </svg>
+        Get Started
+      </button>
+    </div>
+
     <!-- Hero -->
-    <main style="flex:1;display:flex;align-items:center;padding:64px 32px;background:white;">
+    <main id="hero-section"
+      style="flex:1;display:flex;align-items:center;padding:64px 32px;background:#0a0a0a;position:relative;overflow:hidden;">
+      <!-- Background Video -->
+      <video id="hero-bg-video" autoplay muted loop playsinline>
+        <source src="15432213-uhd_3840_2160_50fps (1).mp4" type="video/mp4">
+      </video>
+      <!-- Dark Overlay -->
+      <div id="hero-overlay"></div>
+      <!-- Particle canvas -->
+      <canvas id="hero-canvas"></canvas>
+      <!-- Floating orbs -->
+      <div class="orb"
+        style="width:400px;height:400px;background:radial-gradient(circle,rgba(236,91,19,0.3),transparent);top:-100px;right:-100px;animation-duration:9s;">
+      </div>
+      <div class="orb"
+        style="width:300px;height:300px;background:radial-gradient(circle,rgba(255,140,60,0.2),transparent);bottom:-80px;left:-60px;animation-duration:12s;animation-delay:-4s;">
+      </div>
       <div
-        style="max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+        style="max-width:800px;margin:0 auto;width:100%;display:flex;flex-direction:column;align-items:center;text-align:center;">
         <!-- Left -->
-        <div style="display:flex;flex-direction:column;gap:28px;">
-          <div
-            style="display:inline-flex;align-items:center;gap:8px;background:var(--primary-light);color:var(--primary);padding:8px 18px;border-radius:100px;font-size:11px;font-weight:800;letter-spacing:0.1em;width:fit-content;">
-            <span style="width:6px;height:6px;border-radius:50%;background:var(--primary);"></span>
-            DIGITAL EXCELLENCE
+        <div id="hero-left" style="display:flex;flex-direction:column;gap:28px;align-items:center;">
+          <div class="hero-badge"
+            style="display:inline-flex;align-items:center;gap:8px;color:var(--primary);padding:8px 18px;border-radius:100px;font-size:11px;font-weight:800;letter-spacing:0.1em;width:fit-content;background:rgba(255,255,255,0.1);border:1px solid rgba(236,91,19,0.3);backdrop-filter:blur(8px);">
+            <span class="live-dot"
+              style="width:6px;height:6px;border-radius:50%;background:var(--primary);display:inline-block;"></span>
+            DIGITAL EXCELLENCE · LIVE
           </div>
-          <h1 style="font-size:clamp(42px,5vw,68px);font-weight:800;line-height:1.05;letter-spacing:-0.03em;margin:0;">
-            Transform Your<br><span style="color:var(--primary);">Ideas</span> into Reality
+          <h1 style="font-size:clamp(42px,5vw,68px);font-weight:800;line-height:1.05;letter-spacing:-0.03em;margin:0;color:#ffffff;text-shadow:0 2px 20px rgba(0,0,0,0.3);">
+            Transform Your<br><span id="typewriter-span" style="color:var(--primary);">Ideas</span><span
+              class="typewriter-cursor" id="tw-cursor"></span> into Reality
           </h1>
-          <p style="font-size:18px;line-height:1.7;color:var(--muted);margin:0;max-width:480px;">
+          <p style="font-size:18px;line-height:1.7;color:rgba(255,255,255,0.75);margin:0;max-width:480px;text-shadow:0 1px 8px rgba(0,0,0,0.2);">
             Specialized design services for Websites, Portfolios, and App UI. Professional creativity meets technical
             precision.
           </p>
@@ -588,82 +1002,57 @@
           </div>
 
           <!-- Trust stats -->
-          <div style="display:flex;gap:32px;flex-wrap:wrap;padding-top:8px;border-top:1.5px solid var(--border);">
+          <div style="display:flex;gap:32px;flex-wrap:wrap;padding-top:8px;border-top:1.5px solid rgba(255,255,255,0.15);">
             <div class="stat-card">
-              <span style="font-size:22px;font-weight:800;letter-spacing:-0.03em;color:var(--text);">100%</span>
-              <span style="font-size:12px;color:var(--muted);font-weight:600;">Client Satisfaction</span>
+              <span style="font-size:22px;font-weight:800;letter-spacing:-0.03em;color:#ffffff;"><span
+                  class="count-up" data-target="100" data-suffix="%">0%</span></span>
+              <span style="font-size:12px;color:rgba(255,255,255,0.6);font-weight:600;">Client Satisfaction</span>
             </div>
             <div class="stat-card">
-              <span style="font-size:22px;font-weight:800;letter-spacing:-0.03em;color:var(--text);">3 Days</span>
-              <span style="font-size:12px;color:var(--muted);font-weight:600;">Avg. Delivery</span>
+              <span style="font-size:22px;font-weight:800;letter-spacing:-0.03em;color:#ffffff;"><span
+                  class="count-up" data-target="3" data-suffix=" Days">0 Days</span></span>
+              <span style="font-size:12px;color:rgba(255,255,255,0.6);font-weight:600;">Avg. Delivery</span>
+            </div>
+            <div class="stat-card">
+              <span style="font-size:22px;font-weight:800;letter-spacing:-0.03em;color:#ffffff;"><span
+                  class="count-up" data-target="50" data-suffix="+">0+</span></span>
+              <span style="font-size:12px;color:rgba(255,255,255,0.6);font-weight:600;">Projects Done</span>
             </div>
           </div>
 
         </div>
 
-        <!-- Right: visual -->
-        <div style="position:relative;display:flex;justify-content:center;">
-          <div
-            style="position:absolute;inset:0;background:radial-gradient(circle,rgba(236,91,19,0.15) 0%,transparent 70%);pointer-events:none;">
-          </div>
-          <div style="width:100%;max-width:460px;aspect-ratio:1;position:relative;">
-            <div
-              style="width:100%;height:100%;border-radius:28px;overflow:hidden;border:3px solid white;box-shadow:0 32px 80px rgba(0,0,0,0.18);position:relative;background:linear-gradient(135deg,#2d1a10 0%,#6b2d0e 50%,#ec5b13 100%);">
-              <!-- Abstract SVG art -->
-              <svg width="100%" height="100%" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"
-                style="position:absolute;inset:0;">
-                <defs>
-                  <radialGradient id="rg1" cx="30%" cy="30%">
-                    <stop offset="0%" stop-color="#ff8c42" stop-opacity="0.6" />
-                    <stop offset="100%" stop-color="#ec5b13" stop-opacity="0" />
-                  </radialGradient>
-                  <radialGradient id="rg2" cx="70%" cy="70%">
-                    <stop offset="0%" stop-color="#ff6b1a" stop-opacity="0.4" />
-                    <stop offset="100%" stop-color="#ec5b13" stop-opacity="0" />
-                  </radialGradient>
-                </defs>
-                <rect width="400" height="400" fill="#1a0d06" />
-                <circle cx="120" cy="130" r="160" fill="url(#rg1)" />
-                <circle cx="300" cy="280" r="140" fill="url(#rg2)" />
-                <!-- Geometric lines -->
-                <line x1="0" y1="200" x2="400" y2="200" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
-                <line x1="200" y1="0" x2="200" y2="400" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
-                <polygon points="200,40 340,320 60,320" fill="none" stroke="rgba(255,140,66,0.2)" stroke-width="1.5" />
-                <polygon points="200,80 310,290 90,290" fill="none" stroke="rgba(255,140,66,0.15)" stroke-width="1" />
-                <circle cx="200" cy="200" r="80" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />
-                <circle cx="200" cy="200" r="120" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
-                <!-- Dots -->
-                <circle cx="200" cy="200" r="8" fill="#ec5b13" />
-                <circle cx="200" cy="120" r="4" fill="rgba(255,140,66,0.7)" />
-                <circle cx="270" cy="240" r="3" fill="rgba(255,140,66,0.5)" />
-                <circle cx="140" cy="260" r="3" fill="rgba(255,140,66,0.5)" />
-              </svg>
 
-              <!-- Floating card -->
-              <div class="hero-card" style="position:absolute;bottom:24px;left:20px;right:20px;">
-                <div
-                  style="width:46px;height:46px;border-radius:14px;background:var(--primary-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)"
-                    stroke-width="2.5">
-                    <path d="M2 13.5V16c0 1.1.9 2 2 2h3m10 0h3c1.1 0 2-.9 2-2v-2.5M12 3v13M7 8l5-5 5 5" />
-                  </svg>
-                </div>
-                <div>
-                  <div style="font-weight:800;font-size:14px;color:var(--text);">Expert UI Designers</div>
-                  <div style="font-size:12px;color:var(--muted);margin-top:2px;">Award winning creative team</div>
-                </div>
-                <div style="margin-left:auto;display:flex;gap:2px;">
-                  <div style="width:8px;height:8px;border-radius:50%;background:var(--primary);"></div>
-                  <div style="width:8px;height:8px;border-radius:50%;background:var(--primary);opacity:0.5;"></div>
-                  <div style="width:8px;height:8px;border-radius:50%;background:var(--primary);opacity:0.25;"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </main>
 
+
+    <!-- ── MARQUEE TRUST STRIP ── -->
+    <div
+      style="background:white;border-top:1.5px solid var(--border);border-bottom:1.5px solid var(--border);padding:16px 0;overflow:hidden;">
+      <div class="marquee-wrap">
+        <div class="marquee-track" id="marquee-track">
+          <!-- Items duplicated for seamless loop -->
+          <span class="marquee-item"><span></span> Fast Delivery</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span></span> NDA Protected</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span></span> Premium Quality</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span></span> 5-Star Reviews</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span></span> Custom Design</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span></span> Mobile First</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span></span> Made in India</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span></span> Figma Files Included</span><span class="marquee-dot"></span>
+          <!-- Duplicate for seamless loop -->
+          <span class="marquee-item"><span></span> Fast Delivery</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span></span> NDA Protected</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span></span> Premium Quality</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span></span> 5-Star Reviews</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span></span> Custom Design</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span></span> Mobile First</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span></span> Made in India</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span></span> Figma Files Included</span><span class="marquee-dot"></span>
+        </div>
+      </div>
+    </div>
 
     <!-- ── SAMPLE PORTFOLIO SHOWCASE ── -->
     <section style="background:var(--bg);padding:72px 32px;">
@@ -701,24 +1090,20 @@
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;">
 
           <!-- Card 1: Brand Identity Site -->
-          <div
-            style="background:white;border:1.5px solid var(--border);border-radius:24px;overflow:hidden;transition:all 0.2s;cursor:pointer;"
-            onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(236,91,19,0.12)'"
-            onmouseout="this.style.transform='';this.style.boxShadow=''">
-            <div
+          <div class="tilt-card portfolio-card"
+            style="background:white;border:1.5px solid var(--border);border-radius:24px;overflow:hidden;transition:all 0.2s;cursor:pointer;">
+            <div class="portfolio-img-wrap"
               style="aspect-ratio:16/9;background:linear-gradient(135deg,#1a0d06,#ec5b13);position:relative;overflow:hidden;">
               <svg width="100%" height="100%" viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg">
                 <rect width="400" height="225" fill="#1a0d06" />
                 <circle cx="100" cy="112" r="140" fill="rgba(236,91,19,0.25)" />
                 <circle cx="340" cy="60" r="80" fill="rgba(236,91,19,0.15)" />
-                <!-- Browser chrome -->
                 <rect x="32" y="28" width="336" height="180" rx="10" fill="rgba(255,255,255,0.06)"
                   stroke="rgba(255,255,255,0.12)" stroke-width="1" />
                 <circle cx="50" cy="42" r="4" fill="rgba(255,100,80,0.7)" />
                 <circle cx="64" cy="42" r="4" fill="rgba(255,200,50,0.7)" />
                 <circle cx="78" cy="42" r="4" fill="rgba(80,200,80,0.7)" />
                 <rect x="96" y="36" width="200" height="12" rx="6" fill="rgba(255,255,255,0.08)" />
-                <!-- Page content mockup -->
                 <rect x="48" y="60" width="120" height="10" rx="3" fill="rgba(255,255,255,0.5)" />
                 <rect x="48" y="76" width="80" height="7" rx="3" fill="rgba(255,255,255,0.25)" />
                 <rect x="48" y="96" width="60" height="28" rx="8" fill="rgba(236,91,19,0.8)" />
@@ -742,11 +1127,9 @@
           </div>
 
           <!-- Card 2: Creative Portfolio -->
-          <div
-            style="background:white;border:1.5px solid var(--border);border-radius:24px;overflow:hidden;transition:all 0.2s;cursor:pointer;"
-            onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(236,91,19,0.12)'"
-            onmouseout="this.style.transform='';this.style.boxShadow=''">
-            <div
+          <div class="tilt-card portfolio-card"
+            style="background:white;border:1.5px solid var(--border);border-radius:24px;overflow:hidden;transition:all 0.2s;cursor:pointer;">
+            <div class="portfolio-img-wrap"
               style="aspect-ratio:16/9;background:linear-gradient(135deg,#0f172a,#7c3aed);position:relative;overflow:hidden;">
               <svg width="100%" height="100%" viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg">
                 <rect width="400" height="225" fill="#0f172a" />
@@ -785,11 +1168,9 @@
           </div>
 
           <!-- Card 3: App UI -->
-          <div
-            style="background:white;border:1.5px solid var(--border);border-radius:24px;overflow:hidden;transition:all 0.2s;cursor:pointer;"
-            onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(236,91,19,0.12)'"
-            onmouseout="this.style.transform='';this.style.boxShadow=''">
-            <div
+          <div class="tilt-card portfolio-card"
+            style="background:white;border:1.5px solid var(--border);border-radius:24px;overflow:hidden;transition:all 0.2s;cursor:pointer;">
+            <div class="portfolio-img-wrap"
               style="aspect-ratio:16/9;background:linear-gradient(135deg,#022c22,#059669);position:relative;overflow:hidden;">
               <svg width="100%" height="100%" viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg">
                 <rect width="400" height="225" fill="#022c22" />
@@ -827,6 +1208,84 @@
         </div>
       </div>
     </section>
+
+    <hr class="gradient-divider">
+
+    <!-- ── TESTIMONIALS ── -->
+    <section id="testimonials">
+      <div style="max-width:1200px;margin:0 auto;">
+        <div style="text-align:center;margin-bottom:48px;">
+          <div
+            style="display:inline-flex;align-items:center;gap:8px;background:rgba(236,91,19,0.15);color:#ff8f4b;padding:6px 16px;border-radius:100px;font-size:11px;font-weight:800;letter-spacing:0.1em;margin-bottom:16px;">
+            <span style="width:5px;height:5px;border-radius:50%;background:#ff8f4b;"></span>
+            CLIENT REVIEWS
+          </div>
+          <h2
+            style="font-size:clamp(28px,3.5vw,40px);font-weight:800;letter-spacing:-0.03em;margin:0 0 12px;color:white;">
+            What Our Clients Say</h2>
+          <p style="color:rgba(255,255,255,0.55);font-size:15px;margin:0;">Trusted by founders, freelancers & growing
+            businesses.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
+          <div class="testimonial-card">
+            <div style="display:flex;gap:4px;margin-bottom:14px;">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+                class="star">★</span><span class="star">★</span>
+            </div>
+            <p style="font-size:15px;line-height:1.7;color:rgba(255,255,255,0.8);margin:0 0 20px;">&ldquo;CustomQuest
+              delivered a stunning portfolio in just 2 days. The design was way beyond what I expected — my clients
+              immediately noticed the difference.&rdquo;</p>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div
+                style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#ec5b13,#ff8f4b);display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-size:14px;">
+                P</div>
+              <div>
+                <div style="font-weight:800;color:white;font-size:14px;">Priya Sharma</div>
+                <div style="font-size:12px;color:rgba(255,255,255,0.45);">Freelance Photographer, Mumbai</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div style="display:flex;gap:4px;margin-bottom:14px;">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+                class="star">★</span><span class="star">★</span>
+            </div>
+            <p style="font-size:15px;line-height:1.7;color:rgba(255,255,255,0.8);margin:0 0 20px;">&ldquo;Honestly
+              impressed. The App UI they designed is cleaner than anything I've seen from agencies charging 10x more.
+              Communication was smooth throughout.&rdquo;</p>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div
+                style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#a78bfa);display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-size:14px;">
+                R</div>
+              <div>
+                <div style="font-weight:800;color:white;font-size:14px;">Rahul Verma</div>
+                <div style="font-size:12px;color:rgba(255,255,255,0.45);">Startup Founder, Bangalore</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div style="display:flex;gap:4px;margin-bottom:14px;">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+                class="star">★</span><span class="star">★</span>
+            </div>
+            <p style="font-size:15px;line-height:1.7;color:rgba(255,255,255,0.8);margin:0 0 20px;">&ldquo;The ₹699
+              portfolio package is a steal. Got a beautiful, fully responsive site in 3 days with the Figma file and
+              style guide. Will be coming back!&rdquo;</p>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div
+                style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#059669,#34d399);display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-size:14px;">
+                A</div>
+              <div>
+                <div style="font-weight:800;color:white;font-size:14px;">Ananya Patel</div>
+                <div style="font-size:12px;color:rgba(255,255,255,0.45);">UX Designer, Delhi</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="gradient-divider">
 
     <!-- ── NEW PACKAGES OFFER ── -->
     <section style="background:white;padding:72px 32px 56px;border-top:1.5px solid var(--border);">
@@ -2217,6 +2676,158 @@
     }
     adjustHeroLayout();
     window.addEventListener('resize', adjustHeroLayout);
+
+    // Scroll Animations
+    document.addEventListener("DOMContentLoaded", () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+          }
+        });
+      }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+      const elementsToAnimate = document.querySelectorAll(
+        "section > div > div, .service-card, .project-card, .stat-card, h2, p, .faq-item, .hero-card, .testimonial-card"
+      );
+      elementsToAnimate.forEach((el) => {
+        el.classList.add("scroll-anim");
+        observer.observe(el);
+      });
+    });
+
+    // ── PARTICLE CANVAS ─────────────────────────────────────────
+    (function () {
+      const canvas = document.getElementById('hero-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let W, H, particles = [];
+      function resize() {
+        const hero = document.getElementById('hero-section');
+        W = canvas.width = hero.offsetWidth;
+        H = canvas.height = hero.offsetHeight;
+      }
+      function Particle() {
+        this.x = Math.random() * W;
+        this.y = Math.random() * H;
+        this.r = Math.random() * 2 + 0.5;
+        this.vx = (Math.random() - 0.5) * 0.4;
+        this.vy = (Math.random() - 0.5) * 0.4;
+        this.alpha = Math.random() * 0.25 + 0.05;
+      }
+      function init() {
+        resize();
+        particles = Array.from({ length: 60 }, () => new Particle());
+      }
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+        particles.forEach(p => {
+          p.x += p.vx; p.y += p.vy;
+          if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
+          if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(236,91,19,${p.alpha})`;
+          ctx.fill();
+        });
+        // Draw connections
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 100) {
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = `rgba(236,91,19,${0.06 * (1 - dist / 100)})`;
+              ctx.lineWidth = 0.8;
+              ctx.stroke();
+            }
+          }
+        }
+        requestAnimationFrame(draw);
+      }
+      window.addEventListener('resize', () => { resize(); particles = Array.from({ length: 60 }, () => new Particle()); });
+      init(); draw();
+    })();
+
+    // ── TYPEWRITER EFFECT ────────────────────────────────────────
+    (function () {
+      const span = document.getElementById('typewriter-span');
+      if (!span) return;
+      const words = ['Ideas', 'Dreams', 'Vision', 'Brand', 'Story'];
+      let wi = 0, ci = 0, deleting = false;
+      function tick() {
+        const word = words[wi];
+        if (deleting) {
+          span.textContent = word.slice(0, ci--);
+          if (ci < 0) { deleting = false; wi = (wi + 1) % words.length; setTimeout(tick, 400); return; }
+          setTimeout(tick, 60);
+        } else {
+          span.textContent = word.slice(0, ++ci);
+          if (ci === word.length) { deleting = true; setTimeout(tick, 1800); return; }
+          setTimeout(tick, 100);
+        }
+      }
+      setTimeout(tick, 1200);
+    })();
+
+    // ── SCROLL PROGRESS BAR ──────────────────────────────────────
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      const bar = document.getElementById('scroll-progress');
+      if (bar) bar.style.width = pct + '%';
+
+      // Glassmorphism nav on scroll
+      const nav = document.getElementById('main-nav');
+      if (nav) nav.classList.toggle('scrolled', scrollTop > 20);
+
+      // Floating CTA
+      const cta = document.getElementById('floating-cta');
+      if (cta) cta.classList.toggle('visible', scrollTop > 400);
+    }, { passive: true });
+
+    // ── ANIMATED COUNTERS ────────────────────────────────────────
+    (function () {
+      const counters = document.querySelectorAll('.count-up');
+      if (!counters.length) return;
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          const target = parseInt(el.dataset.target);
+          const suffix = el.dataset.suffix || '';
+          let current = 0;
+          const step = Math.max(1, Math.floor(target / 40));
+          const iv = setInterval(() => {
+            current = Math.min(current + step, target);
+            el.textContent = current + suffix;
+            if (current >= target) clearInterval(iv);
+          }, 30);
+          obs.unobserve(el);
+        });
+      }, { threshold: 0.5 });
+      counters.forEach(c => obs.observe(c));
+    })();
+
+    // ── 3D TILT ON CARDS ────────────────────────────────────────
+    document.querySelectorAll('.tilt-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const cx = rect.width / 2, cy = rect.height / 2;
+        const rotX = ((y - cy) / cy) * -6;
+        const rotY = ((x - cx) / cx) * 6;
+        card.style.transform = `perspective(800px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(-4px)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
 
     // Expose all functions globally so onclick attributes work
     window.goTo = goTo;
