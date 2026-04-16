@@ -29,16 +29,15 @@
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
     import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-    // ─── REPLACE WITH YOUR FIREBASE CONFIG ───────────────────────────────────
-    // Go to: Firebase Console → Project Settings → Your apps → SDK setup & config
+    // ─── FIREBASE CONFIG (customquestv2) ─────────────────────────────────────
     const firebaseConfig = {
-      apiKey: "AIzaSyACmdRoh9wR_bHZcYvibzlINIw3_X10lW0",
-      authDomain: "customquest.firebaseapp.com",
-      projectId: "customquest",
-      storageBucket: "customquest.firebasestorage.app",
-      messagingSenderId: "168739041520",
-      appId: "1:168739041520:web:e0e75578da9d93fb16d235",
-      measurementId: "G-10FR1KMNDC"
+      apiKey: "AIzaSyCS-JTOZNB0telfg9q0ZHwUn5BmVevWJO0",
+      authDomain: "customquestv2.firebaseapp.com",
+      projectId: "customquestv2",
+      storageBucket: "customquestv2.firebasestorage.app",
+      messagingSenderId: "880122094552",
+      appId: "1:880122094552:web:e68ba2b45c086b623ec8ad",
+      measurementId: "G-V4X900108S"
     };
     // ─────────────────────────────────────────────────────────────────────────
 
@@ -601,12 +600,10 @@
     #hero-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        135deg,
-        rgba(0, 0, 0, 0.72) 0%,
-        rgba(26, 13, 6, 0.65) 50%,
-        rgba(0, 0, 0, 0.58) 100%
-      );
+      background: linear-gradient(135deg,
+          rgba(0, 0, 0, 0.72) 0%,
+          rgba(26, 13, 6, 0.65) 50%,
+          rgba(0, 0, 0, 0.58) 100%);
       z-index: 1;
       pointer-events: none;
     }
@@ -979,11 +976,13 @@
               style="width:6px;height:6px;border-radius:50%;background:var(--primary);display:inline-block;"></span>
             DIGITAL EXCELLENCE · LIVE
           </div>
-          <h1 style="font-size:clamp(42px,5vw,68px);font-weight:800;line-height:1.05;letter-spacing:-0.03em;margin:0;color:#ffffff;text-shadow:0 2px 20px rgba(0,0,0,0.3);">
+          <h1
+            style="font-size:clamp(42px,5vw,68px);font-weight:800;line-height:1.05;letter-spacing:-0.03em;margin:0;color:#ffffff;text-shadow:0 2px 20px rgba(0,0,0,0.3);">
             Transform Your<br><span id="typewriter-span" style="color:var(--primary);">Ideas</span><span
               class="typewriter-cursor" id="tw-cursor"></span> into Reality
           </h1>
-          <p style="font-size:18px;line-height:1.7;color:rgba(255,255,255,0.75);margin:0;max-width:480px;text-shadow:0 1px 8px rgba(0,0,0,0.2);">
+          <p
+            style="font-size:18px;line-height:1.7;color:rgba(255,255,255,0.75);margin:0;max-width:480px;text-shadow:0 1px 8px rgba(0,0,0,0.2);">
             Specialized design services for Websites, Portfolios, and App UI. Professional creativity meets technical
             precision.
           </p>
@@ -1002,20 +1001,21 @@
           </div>
 
           <!-- Trust stats -->
-          <div style="display:flex;gap:32px;flex-wrap:wrap;padding-top:8px;border-top:1.5px solid rgba(255,255,255,0.15);">
+          <div
+            style="display:flex;gap:32px;flex-wrap:wrap;padding-top:8px;border-top:1.5px solid rgba(255,255,255,0.15);">
             <div class="stat-card">
-              <span style="font-size:22px;font-weight:800;letter-spacing:-0.03em;color:#ffffff;"><span
-                  class="count-up" data-target="100" data-suffix="%">0%</span></span>
+              <span style="font-size:22px;font-weight:800;letter-spacing:-0.03em;color:#ffffff;"><span class="count-up"
+                  data-target="100" data-suffix="%">0%</span></span>
               <span style="font-size:12px;color:rgba(255,255,255,0.6);font-weight:600;">Client Satisfaction</span>
             </div>
             <div class="stat-card">
-              <span style="font-size:22px;font-weight:800;letter-spacing:-0.03em;color:#ffffff;"><span
-                  class="count-up" data-target="3" data-suffix=" Days">0 Days</span></span>
+              <span style="font-size:22px;font-weight:800;letter-spacing:-0.03em;color:#ffffff;"><span class="count-up"
+                  data-target="3" data-suffix=" Days">0 Days</span></span>
               <span style="font-size:12px;color:rgba(255,255,255,0.6);font-weight:600;">Avg. Delivery</span>
             </div>
             <div class="stat-card">
-              <span style="font-size:22px;font-weight:800;letter-spacing:-0.03em;color:#ffffff;"><span
-                  class="count-up" data-target="50" data-suffix="+">0+</span></span>
+              <span style="font-size:22px;font-weight:800;letter-spacing:-0.03em;color:#ffffff;"><span class="count-up"
+                  data-target="50" data-suffix="+">0+</span></span>
               <span style="font-size:12px;color:rgba(255,255,255,0.6);font-weight:600;">Projects Done</span>
             </div>
           </div>
