@@ -2740,9 +2740,11 @@
           console.warn('Firebase not initialised — skipping Firestore save.');
         }
 
-        // 2️⃣  Send notification email to site owner
-        await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_OWNER_TPL, ownerParams);
-        console.log('Owner notification sent.');
+        // 2u20e3  Send notification email to site owner (only if template is set)
+        if (EMAILJS_OWNER_TPL) {
+          await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_OWNER_TPL, ownerParams);
+          console.log('Owner notification sent.');
+        }
 
         // 3️⃣  Send auto-reply email to customer
         await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_CUSTOMER_TPL, customerParams);
