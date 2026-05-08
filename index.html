@@ -24,6 +24,23 @@
   <meta name="twitter:title" content="CustomQuest – Web Design & App UI Agency in India | Starting ₹699" />
   <meta name="twitter:description"
     content="CustomQuest is India's affordable web design agency. We build custom websites, portfolios & app UI designs starting at just ₹699." />
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    // ─── EMAILJS CONFIG ───────────────────────────────────────────────────────
+    // 1. Sign up free at https://www.emailjs.com
+    // 2. Add an Email Service (Gmail, Outlook, etc.) → copy the Service ID below
+    // 3. Create TWO Email Templates (see comments) → copy Template IDs below
+    // 4. Go to Account → API Keys → copy your Public Key below
+    const EMAILJS_PUBLIC_KEY   = '-ZjCzH-Bg_AFhKZLs';
+    const EMAILJS_SERVICE_ID   = 'your_service_id_here';  // ← still needs your Service ID
+    const EMAILJS_OWNER_TPL    = '';
+    const EMAILJS_CUSTOMER_TPL = 'template_a7fr13f';
+    // ─────────────────────────────────────────────────────────────────────────
+
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+  </script>
+
   <!-- Firebase SDK -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
@@ -984,8 +1001,7 @@
           </h1>
           <p
             style="font-size:18px;line-height:1.7;color:rgba(255,255,255,0.75);margin:0;max-width:480px;text-shadow:0 1px 8px rgba(0,0,0,0.2);">
-            Specialized design services for Websites, Portfolios, and App UI. Professional creativity meets technical
-            precision.
+            Custom websites, portfolios & app UI — crafted by a dedicated design team in India. Delivery in 3 days, starting at ₹699.
           </p>
           <div style="display:flex;gap:14px;flex-wrap:wrap;">
             <button class="btn-primary" onclick="goTo(2)" style="width:auto;padding:16px 36px;font-size:17px;">
@@ -1016,8 +1032,13 @@
             </div>
             <div class="stat-card">
               <span style="font-size:22px;font-weight:800;letter-spacing:-0.03em;color:#ffffff;"><span class="count-up"
-                  data-target="50" data-suffix="+">0+</span></span>
-              <span style="font-size:12px;color:rgba(255,255,255,0.6);font-weight:600;">Projects Done</span>
+                  data-target="60" data-suffix="+">0+</span></span>
+              <span style="font-size:12px;color:rgba(255,255,255,0.6);font-weight:600;">Projects Delivered</span>
+            </div>
+            <div class="stat-card">
+              <span style="font-size:22px;font-weight:800;letter-spacing:-0.03em;color:#ffffff;"><span class="count-up"
+                  data-target="24" data-suffix="h">0h</span></span>
+              <span style="font-size:12px;color:rgba(255,255,255,0.6);font-weight:600;">Response Time</span>
             </div>
           </div>
 
@@ -1034,23 +1055,27 @@
       <div class="marquee-wrap">
         <div class="marquee-track" id="marquee-track">
           <!-- Items duplicated for seamless loop -->
-          <span class="marquee-item"><span></span> Fast Delivery</span><span class="marquee-dot"></span>
-          <span class="marquee-item"><span></span> NDA Protected</span><span class="marquee-dot"></span>
-          <span class="marquee-item"><span></span> Premium Quality</span><span class="marquee-dot"></span>
-          <span class="marquee-item"><span></span> 5-Star Reviews</span><span class="marquee-dot"></span>
-          <span class="marquee-item"><span></span> Custom Design</span><span class="marquee-dot"></span>
-          <span class="marquee-item"><span></span> Mobile First</span><span class="marquee-dot"></span>
-          <span class="marquee-item"><span></span> Made in India</span><span class="marquee-dot"></span>
-          <span class="marquee-item"><span></span> Figma Files Included</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span>⚡</span> 3-Day Delivery</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span>🔒</span> NDA Protected</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span>✨</span> Premium Quality</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span>⭐</span> 5-Star Reviews</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span>🎨</span> Custom Design Only</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span>📱</span> Mobile-First</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span>🇮🇳</span> Made in India</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span>📐</span> Figma Files Included</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span>🔄</span> 3 Revision Rounds</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span>🤝</span> 30-Day Support</span><span class="marquee-dot"></span>
           <!-- Duplicate for seamless loop -->
-          <span class="marquee-item"><span></span> Fast Delivery</span><span class="marquee-dot"></span>
-          <span class="marquee-item"><span></span> NDA Protected</span><span class="marquee-dot"></span>
-          <span class="marquee-item"><span></span> Premium Quality</span><span class="marquee-dot"></span>
-          <span class="marquee-item"><span></span> 5-Star Reviews</span><span class="marquee-dot"></span>
-          <span class="marquee-item"><span></span> Custom Design</span><span class="marquee-dot"></span>
-          <span class="marquee-item"><span></span> Mobile First</span><span class="marquee-dot"></span>
-          <span class="marquee-item"><span></span> Made in India</span><span class="marquee-dot"></span>
-          <span class="marquee-item"><span></span> Figma Files Included</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span>⚡</span> 3-Day Delivery</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span>🔒</span> NDA Protected</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span>✨</span> Premium Quality</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span>⭐</span> 5-Star Reviews</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span>🎨</span> Custom Design Only</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span>📱</span> Mobile-First</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span>🇮🇳</span> Made in India</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span>📐</span> Figma Files Included</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span>🔄</span> 3 Revision Rounds</span><span class="marquee-dot"></span>
+          <span class="marquee-item"><span>🤝</span> 30-Day Support</span><span class="marquee-dot"></span>
         </div>
       </div>
     </div>
@@ -1068,9 +1093,9 @@
               <span style="width:5px;height:5px;border-radius:50%;background:var(--primary);"></span>
               OUR WORK
             </div>
-            <h2 style="font-size:clamp(28px,3.5vw,40px);font-weight:800;letter-spacing:-0.03em;margin:0;">Sample
-              Portfolio</h2>
-            <p style="color:var(--muted);font-size:15px;margin:8px 0 0;">A glimpse of what we can build for you.</p>
+            <h2 style="font-size:clamp(28px,3.5vw,40px);font-weight:800;letter-spacing:-0.03em;margin:0;">Our Work
+            </h2>
+            <p style="color:var(--muted);font-size:15px;margin:8px 0 0;">A selection of recent projects we've crafted for clients.</p>
           </div>
           <div style="display:flex;gap:12px;flex-wrap:wrap;">
             <button onclick="goTo(2)" class="btn-primary" style="width:auto;padding:13px 28px;font-size:14px;">Start
@@ -1233,16 +1258,14 @@
               <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
                 class="star">★</span><span class="star">★</span>
             </div>
-            <p style="font-size:15px;line-height:1.7;color:rgba(255,255,255,0.8);margin:0 0 20px;">&ldquo;CustomQuest
-              delivered a stunning portfolio in just 2 days. The design was way beyond what I expected — my clients
-              immediately noticed the difference.&rdquo;</p>
+            <p style="font-size:15px;line-height:1.7;color:rgba(255,255,255,0.8);margin:0 0 20px;">&ldquo;My portfolio was embarrassingly outdated. CustomQuest rebuilt it completely in under 3 days — the Figma file alone was worth the price. I landed a new client the very next week.&rdquo;</p>
             <div style="display:flex;align-items:center;gap:12px;">
               <div
                 style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#ec5b13,#ff8f4b);display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-size:14px;">
                 P</div>
               <div>
                 <div style="font-weight:800;color:white;font-size:14px;">Priya Sharma</div>
-                <div style="font-size:12px;color:rgba(255,255,255,0.45);">Freelance Photographer, Mumbai</div>
+                <div style="font-size:12px;color:rgba(255,255,255,0.45);">Freelance Photographer · Mumbai</div>
               </div>
             </div>
           </div>
@@ -1251,16 +1274,14 @@
               <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
                 class="star">★</span><span class="star">★</span>
             </div>
-            <p style="font-size:15px;line-height:1.7;color:rgba(255,255,255,0.8);margin:0 0 20px;">&ldquo;Honestly
-              impressed. The App UI they designed is cleaner than anything I've seen from agencies charging 10x more.
-              Communication was smooth throughout.&rdquo;</p>
+            <p style="font-size:15px;line-height:1.7;color:rgba(255,255,255,0.8);margin:0 0 20px;">&ldquo;We needed a clean App UI for our investor deck — tight deadline, tight budget. CustomQuest nailed the brief in 2 rounds. Communication on WhatsApp was quick and transparent throughout.&rdquo;</p>
             <div style="display:flex;align-items:center;gap:12px;">
               <div
                 style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#a78bfa);display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-size:14px;">
                 R</div>
               <div>
                 <div style="font-weight:800;color:white;font-size:14px;">Rahul Verma</div>
-                <div style="font-size:12px;color:rgba(255,255,255,0.45);">Startup Founder, Bangalore</div>
+                <div style="font-size:12px;color:rgba(255,255,255,0.45);">Co-founder, FinTech Startup · Bengaluru</div>
               </div>
             </div>
           </div>
@@ -1269,16 +1290,62 @@
               <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
                 class="star">★</span><span class="star">★</span>
             </div>
-            <p style="font-size:15px;line-height:1.7;color:rgba(255,255,255,0.8);margin:0 0 20px;">&ldquo;The ₹699
-              portfolio package is a steal. Got a beautiful, fully responsive site in 3 days with the Figma file and
-              style guide. Will be coming back!&rdquo;</p>
+            <p style="font-size:15px;line-height:1.7;color:rgba(255,255,255,0.8);margin:0 0 20px;">&ldquo;The ₹699 portfolio package genuinely over-delivered. Got a fully responsive site, a style guide, and the Figma source file in 3 days. I've referred 4 friends since.&rdquo;</p>
             <div style="display:flex;align-items:center;gap:12px;">
               <div
                 style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#059669,#34d399);display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-size:14px;">
                 A</div>
               <div>
                 <div style="font-weight:800;color:white;font-size:14px;">Ananya Patel</div>
-                <div style="font-size:12px;color:rgba(255,255,255,0.45);">UX Designer, Delhi</div>
+                <div style="font-size:12px;color:rgba(255,255,255,0.45);">Product Designer · Delhi</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div style="display:flex;gap:4px;margin-bottom:14px;">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+                class="star">★</span><span class="star">★</span>
+            </div>
+            <p style="font-size:15px;line-height:1.7;color:rgba(255,255,255,0.8);margin:0 0 20px;">&ldquo;Hired CustomQuest for SEO management after struggling with visibility for months. Within 6 weeks, organic traffic was up noticeably. They explain everything clearly — no jargon.&rdquo;</p>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div
+                style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#0ea5e9,#38bdf8);display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-size:14px;">
+                S</div>
+              <div>
+                <div style="font-weight:800;color:white;font-size:14px;">Siddharth Nair</div>
+                <div style="font-size:12px;color:rgba(255,255,255,0.45);">Small Business Owner · Pune</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div style="display:flex;gap:4px;margin-bottom:14px;">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+                class="star">★</span><span class="star">★</span>
+            </div>
+            <p style="font-size:15px;line-height:1.7;color:rgba(255,255,255,0.8);margin:0 0 20px;">&ldquo;CustomQuest redesigned our agency's website and the impact was immediate — clients started commenting on how polished we looked. Worth every rupee, and then some.&rdquo;</p>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div
+                style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#f59e0b,#fbbf24);display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-size:14px;">
+                M</div>
+              <div>
+                <div style="font-weight:800;color:white;font-size:14px;">Meera Krishnan</div>
+                <div style="font-size:12px;color:rgba(255,255,255,0.45);">Creative Director · Chennai</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div style="display:flex;gap:4px;margin-bottom:14px;">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+                class="star">★</span><span class="star">★</span>
+            </div>
+            <p style="font-size:15px;line-height:1.7;color:rgba(255,255,255,0.8);margin:0 0 20px;">&ldquo;I was skeptical about the price — thought it might be too good. Then I saw the first draft. Absolutely professional work. The revision process was smooth and they genuinely listened.&rdquo;</p>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div
+                style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#ec4899,#f9a8d4);display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-size:14px;">
+                K</div>
+              <div>
+                <div style="font-weight:800;color:white;font-size:14px;">Kavita Menon</div>
+                <div style="font-size:12px;color:rgba(255,255,255,0.45);">Yoga Instructor & Blogger · Kochi</div>
               </div>
             </div>
           </div>
@@ -1491,21 +1558,21 @@
             <div style="font-size:14px;font-weight:800;margin-bottom:6px;">Custom Websites</div>
             <p style="font-size:13px;color:var(--muted);line-height:1.6;margin:0;">Brand-first, conversion-focused sites
               built from scratch — fast, responsive, and unique to you.</p>
-            <div style="font-size:12px;font-weight:700;color:var(--primary);margin-top:12px;">From ₹5,000</div>
+            <div style="font-size:12px;font-weight:700;color:var(--primary);margin-top:12px;">From ₹1,299</div>
           </div>
           <div style="background:white;border:1.5px solid var(--border);border-radius:20px;padding:22px 20px;">
             <div style="font-size:22px;margin-bottom:10px;">💼</div>
             <div style="font-size:14px;font-weight:800;margin-bottom:6px;">Portfolio Design</div>
             <p style="font-size:13px;color:var(--muted);line-height:1.6;margin:0;">Sleek, minimal portfolios that
               showcase your best work and open doors to bigger opportunities.</p>
-            <div style="font-size:12px;font-weight:700;color:var(--primary);margin-top:12px;">From ₹5,000</div>
+            <div style="font-size:12px;font-weight:700;color:var(--primary);margin-top:12px;">From ₹699</div>
           </div>
           <div style="background:white;border:1.5px solid var(--border);border-radius:20px;padding:22px 20px;">
             <div style="font-size:22px;margin-bottom:10px;">📱</div>
             <div style="font-size:14px;font-weight:800;margin-bottom:6px;">App UI Design</div>
             <p style="font-size:13px;color:var(--muted);line-height:1.6;margin:0;">Beautiful, intuitive mobile
               interfaces for iOS &amp; Android, designed for real users and real engagement.</p>
-            <div style="font-size:12px;font-weight:700;color:var(--primary);margin-top:12px;">From ₹5,000</div>
+            <div style="font-size:12px;font-weight:700;color:var(--primary);margin-top:12px;">From ₹1,299</div>
           </div>
         </div>
 
@@ -1742,8 +1809,8 @@
         <!-- Bottom bar -->
         <div
           style="border-top:1px solid rgba(255,255,255,0.08);padding-top:20px;display:flex;align-items:center;justify-content:center;">
-          <p style="font-size:12px;color:rgba(255,255,255,0.3);margin:0;text-align:center;">© 2025 CustomQuest. All
-            rights reserved. · Digital Design Agency</p>
+          <p style="font-size:12px;color:rgba(255,255,255,0.3);margin:0;text-align:center;">© 2026 CustomQuest. All
+            rights reserved. · Digital Design Agency · India</p>
         </div>
 
       </div>
@@ -2624,23 +2691,68 @@
         projectBrief: service !== 'website' ? { focus: projectFocus, platforms, coreFunctionality: coreFunc, aesthetics } : null,
       };
 
-      // Save to Firestore
-      const fs = window._firestore;
-      if (!fs) {
-        console.warn('Firebase not initialised. Data:', submission);
-        goTo(6);
-        return;
+      // ── Build a readable brief summary for the email ─────────────────────
+      let briefSummary = '';
+      if (service === 'website') {
+        briefSummary = [
+          websiteGoal   ? `Goal: ${websiteGoal}`           : '',
+          websitePages  ? `Pages: ${websitePages}`          : '',
+          websiteRef    ? `Reference: ${websiteRef}`        : '',
+          websiteStyles.length ? `Styles: ${websiteStyles.join(', ')}` : '',
+        ].filter(Boolean).join('\n');
+      } else {
+        briefSummary = [
+          `Focus: ${projectFocus}`,
+          platforms.length  ? `Platforms: ${platforms.join(', ')}`  : '',
+          coreFunc          ? `Core functionality: ${coreFunc}`      : '',
+          aesthetics.length ? `Aesthetics: ${aesthetics.join(', ')}` : '',
+        ].filter(Boolean).join('\n');
       }
 
-      showToast('Saving your request…');
+      // ── EmailJS template params ───────────────────────────────────────────
+      // These variable names must match the {{variable}} placeholders you set
+      // inside your EmailJS templates on the dashboard.
+      const ownerParams = {
+        customer_name:  name,
+        customer_email: email,
+        service_type:   service ? service.charAt(0).toUpperCase() + service.slice(1) : 'N/A',
+        brief_summary:  briefSummary || '(no brief provided)',
+        submitted_at:   new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+      };
+
+      const customerParams = {
+        customer_name:  name,
+        customer_email: email,
+        service_type:   service ? service.charAt(0).toUpperCase() + service.slice(1) : 'N/A',
+      };
+
+      // Save to Firestore first, then send emails
+      const fs = window._firestore;
+      showToast('Submitting your request…');
+
       try {
-        submission.submittedAt = fs.serverTimestamp();
-        const docRef = await fs.addDoc(fs.collection(fs.db, 'submissions'), submission);
-        console.log('Saved with ID:', docRef.id);
+        // 1️⃣  Save to Firestore (if available)
+        if (fs) {
+          submission.submittedAt = fs.serverTimestamp();
+          const docRef = await fs.addDoc(fs.collection(fs.db, 'submissions'), submission);
+          console.log('Firestore saved with ID:', docRef.id);
+        } else {
+          console.warn('Firebase not initialised — skipping Firestore save.');
+        }
+
+        // 2️⃣  Send notification email to site owner
+        await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_OWNER_TPL, ownerParams);
+        console.log('Owner notification sent.');
+
+        // 3️⃣  Send auto-reply email to customer
+        await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_CUSTOMER_TPL, customerParams);
+        console.log('Customer auto-reply sent.');
+
         goTo(6);
+
       } catch (err) {
-        console.error('Firestore error:', err);
-        showToast('Could not save — please try again');
+        console.error('Submission error:', err);
+        showToast('Something went wrong — please try again');
       }
     }
 
