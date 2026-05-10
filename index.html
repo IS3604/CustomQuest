@@ -4,48 +4,26 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CustomQuest – Custom Websites & App UI for Freelancers & Startups | From ₹699, Delivered in 3 Days</title>
+  <title>CustomQuest – Web Design & App UI Agency in India | Starting ₹699</title>
   <meta name="description"
-    content="CustomQuest builds custom websites and app UI for freelance creators and early-stage startups across India. Professional designs delivered in 3 days, starting at ₹699. Stand out online — get started today." />
+    content="CustomQuest is India's affordable web design agency. We build custom websites, portfolios & app UI designs starting at just ₹699. Contact us today!" />
   <meta name="keywords"
-    content="web design India, affordable web design, portfolio website India, app UI design, startup website, freelancer website, custom website ₹699, web design for creators, web design for startups, UI design India, website delivered in 3 days" />
+    content="web design India, affordable web design, portfolio website, app UI design, SEO management, custom website India" />
   <meta name="author" content="CustomQuest" />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#ec5b13" />
   <link rel="canonical" href="https://customquest.in/" />
   <!-- Open Graph / Social Preview -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://customquest.in/" />
-  <meta property="og:title" content="CustomQuest – Custom Websites & App UI for Freelancers & Startups | From ₹699" />
+  <meta property="og:title" content="CustomQuest – Web Design & App UI Agency in India | Starting ₹699" />
   <meta property="og:description"
-    content="Custom websites and app UI built for freelance creators and early-stage startups. Delivered in 3 days, starting at ₹699. Your competitor's site just got a client that should've been yours — let's fix that." />
+    content="CustomQuest is India's affordable web design agency. We build custom websites, portfolios & app UI designs starting at just ₹699. Contact us today!" />
   <meta property="og:site_name" content="CustomQuest" />
-  <meta property="og:locale" content="en_IN" />
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@customquest" />
-  <meta name="twitter:title" content="CustomQuest – Custom Websites & App UI for Freelancers & Startups | From ₹699" />
+  <meta name="twitter:title" content="CustomQuest – Web Design & App UI Agency in India | Starting ₹699" />
   <meta name="twitter:description"
-    content="Custom websites and app UI for freelance creators and early-stage startups in India. 3-day delivery, starting at ₹699. Stand out online with CustomQuest." />
-  <!-- Structured Data: LocalBusiness -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "CustomQuest",
-    "url": "https://customquest.in/",
-    "description": "Custom websites and app UI for freelance creators and early-stage startups across India. Professional designs delivered in 3 days, starting at ₹699.",
-    "priceRange": "₹699+",
-    "areaServed": "IN",
-    "serviceType": ["Web Design", "App UI Design", "Portfolio Website", "Startup Website"],
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "INR",
-      "price": "699",
-      "description": "Custom website or app UI design starting at ₹699"
-    }
-  }
-  </script>
+    content="CustomQuest is India's affordable web design agency. We build custom websites, portfolios & app UI designs starting at just ₹699." />
   <!-- EmailJS SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
@@ -616,38 +594,74 @@
       box-shadow: var(--glow), 0 8px 24px rgba(236, 91, 19, 0.3);
     }
 
-    /* Hero Section */
     #hero-section {
       position: relative;
       overflow: hidden;
     }
 
-    /* Hero background illustration */
-    #hero-bg-image {
+    #hero-section::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      background: linear-gradient(to bottom, transparent, rgba(8, 3, 0, 0.55));
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Subtle orange vignette edge glow on hero */
+    #hero-section::before {
+      content: '';
       position: absolute;
       inset: 0;
-      width: 100%;
-      height: 100%;
+      box-shadow: inset 0 0 120px rgba(236, 91, 19, 0.08), inset 0 -1px 0 rgba(236, 91, 19, 0.3);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    /* Background Video */
+    #hero-bg-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
       z-index: 0;
-      overflow: hidden;
+      object-fit: cover;
+      filter: saturate(0.7) brightness(0.85);
     }
 
-    #hero-bg-image svg {
-      width: 100%;
-      height: 100%;
-    }
-
-    /* Overlay so text stays crisp */
+    /* Warm brand-toned overlay for text readability */
     #hero-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        105deg,
-        rgba(10, 5, 2, 0.88) 0%,
-        rgba(18, 9, 4, 0.70) 50%,
-        rgba(8, 4, 2, 0.52) 100%
-      );
+      background:
+        /* Top-left warm orange glow */
+        radial-gradient(ellipse 70% 60% at 0% 0%, rgba(236, 91, 19, 0.38) 0%, transparent 60%),
+        /* Bottom-right deep warm shadow */
+        radial-gradient(ellipse 60% 50% at 100% 100%, rgba(180, 50, 0, 0.32) 0%, transparent 60%),
+        /* Center rich dark base for readability */
+        linear-gradient(160deg,
+          rgba(15, 7, 2, 0.68) 0%,
+          rgba(30, 12, 4, 0.60) 40%,
+          rgba(10, 5, 2, 0.72) 100%);
       z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Subtle noise grain texture over video */
+    #hero-overlay::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      opacity: 0.06;
+      mix-blend-mode: overlay;
       pointer-events: none;
     }
 
@@ -1059,275 +1073,24 @@
 
     <!-- Hero -->
     <main id="hero-section"
-      style="flex:1;display:flex;align-items:center;padding:64px 32px;background:#0a0a0a;position:relative;overflow:hidden;">
-      <!-- Background Illustration -->
-      <div id="hero-bg-image">
-        <svg viewBox="0 0 1440 820" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <radialGradient id="bgGrad" cx="55%" cy="45%" r="75%">
-              <stop offset="0%" stop-color="#1c0a04"/>
-              <stop offset="55%" stop-color="#0d0604"/>
-              <stop offset="100%" stop-color="#060304"/>
-            </radialGradient>
-            <radialGradient id="glowA" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#ec5b13" stop-opacity="0.45"/>
-              <stop offset="100%" stop-color="#ec5b13" stop-opacity="0"/>
-            </radialGradient>
-            <radialGradient id="glowB" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#ff8f4b" stop-opacity="0.25"/>
-              <stop offset="100%" stop-color="#ff8f4b" stop-opacity="0"/>
-            </radialGradient>
-            <radialGradient id="glowC" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.18"/>
-              <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
-            </radialGradient>
-            <filter id="softBlur" x="-20%" y="-20%" width="140%" height="140%">
-              <feGaussianBlur stdDeviation="1.5"/>
-            </filter>
-            <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-              <feGaussianBlur stdDeviation="3" result="blur"/>
-              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-            </filter>
-            <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#ec5b13" stop-opacity="0.6"/>
-              <stop offset="100%" stop-color="#ff8f4b" stop-opacity="0.1"/>
-            </linearGradient>
-            <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#1e1008"/>
-              <stop offset="100%" stop-color="#0d0604"/>
-            </linearGradient>
-          </defs>
-
-          <!-- Base background -->
-          <rect width="1440" height="820" fill="url(#bgGrad)"/>
-
-          <!-- Ambient glow orbs -->
-          <ellipse cx="1050" cy="260" rx="420" ry="340" fill="url(#glowA)" opacity="0.7"/>
-          <ellipse cx="200" cy="620" rx="280" ry="240" fill="url(#glowB)" opacity="0.5"/>
-          <ellipse cx="800" cy="100" rx="220" ry="180" fill="url(#glowC)" opacity="0.6"/>
-
-          <!-- Fine grid lines (subtle) -->
-          <g opacity="0.06" stroke="#ec5b13" stroke-width="0.6">
-            <!-- Vertical grid -->
-            <line x1="120" y1="0" x2="120" y2="820"/>
-            <line x1="240" y1="0" x2="240" y2="820"/>
-            <line x1="360" y1="0" x2="360" y2="820"/>
-            <line x1="480" y1="0" x2="480" y2="820"/>
-            <line x1="600" y1="0" x2="600" y2="820"/>
-            <line x1="720" y1="0" x2="720" y2="820"/>
-            <line x1="840" y1="0" x2="840" y2="820"/>
-            <line x1="960" y1="0" x2="960" y2="820"/>
-            <line x1="1080" y1="0" x2="1080" y2="820"/>
-            <line x1="1200" y1="0" x2="1200" y2="820"/>
-            <line x1="1320" y1="0" x2="1320" y2="820"/>
-            <!-- Horizontal grid -->
-            <line x1="0" y1="82" x2="1440" y2="82"/>
-            <line x1="0" y1="164" x2="1440" y2="164"/>
-            <line x1="0" y1="246" x2="1440" y2="246"/>
-            <line x1="0" y1="328" x2="1440" y2="328"/>
-            <line x1="0" y1="410" x2="1440" y2="410"/>
-            <line x1="0" y1="492" x2="1440" y2="492"/>
-            <line x1="0" y1="574" x2="1440" y2="574"/>
-            <line x1="0" y1="656" x2="1440" y2="656"/>
-            <line x1="0" y1="738" x2="1440" y2="738"/>
-          </g>
-
-          <!-- Diagonal accent lines -->
-          <g opacity="0.08" stroke="#ec5b13" stroke-width="1">
-            <line x1="700" y1="0" x2="1440" y2="500"/>
-            <line x1="800" y1="0" x2="1440" y2="380"/>
-            <line x1="1000" y1="0" x2="1440" y2="260"/>
-          </g>
-
-          <!-- ── LARGE BROWSER WINDOW MOCKUP (right side) ── -->
-          <g transform="translate(730, 80)" opacity="0.92">
-            <!-- Window shadow -->
-            <rect x="4" y="6" width="660" height="440" rx="16" fill="rgba(0,0,0,0.5)"/>
-            <!-- Window frame -->
-            <rect width="660" height="440" rx="16" fill="#161008" stroke="rgba(236,91,19,0.25)" stroke-width="1.2"/>
-            <!-- Title bar -->
-            <rect width="660" height="40" rx="16" fill="#1e1308"/>
-            <rect y="24" width="660" height="16" fill="#1e1308"/>
-            <!-- Traffic lights -->
-            <circle cx="20" cy="20" r="6" fill="#ff5f57"/>
-            <circle cx="38" cy="20" r="6" fill="#febc2e"/>
-            <circle cx="56" cy="20" r="6" fill="#28c840"/>
-            <!-- URL bar -->
-            <rect x="72" y="10" width="480" height="20" rx="6" fill="rgba(255,255,255,0.06)"/>
-            <text x="84" y="23" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.3)">customquest.in — Custom Web Design Agency India</text>
-            <!-- Nav strip -->
-            <rect x="0" y="40" width="660" height="36" fill="#130c05"/>
-            <rect x="16" y="50" width="80" height="16" rx="4" fill="rgba(236,91,19,0.8)"/>
-            <text x="28" y="62" font-family="sans-serif" font-size="9" font-weight="700" fill="white">CustomQuest</text>
-            <rect x="280" y="52" width="40" height="12" rx="3" fill="rgba(255,255,255,0.08)"/>
-            <rect x="330" y="52" width="40" height="12" rx="3" fill="rgba(255,255,255,0.08)"/>
-            <rect x="380" y="52" width="40" height="12" rx="3" fill="rgba(255,255,255,0.08)"/>
-            <rect x="580" y="48" width="64" height="20" rx="10" fill="rgba(236,91,19,0.7)"/>
-            <text x="592" y="61" font-family="sans-serif" font-size="9" font-weight="700" fill="white">WhatsApp</text>
-            <!-- Hero section inside browser -->
-            <rect x="0" y="76" width="660" height="200" fill="url(#screenGrad)"/>
-            <!-- Tagline text mockup -->
-            <rect x="20" y="96" width="180" height="10" rx="3" fill="rgba(236,91,19,0.5)"/>
-            <rect x="20" y="114" width="300" height="18" rx="4" fill="rgba(255,255,255,0.7)"/>
-            <rect x="20" y="138" width="260" height="18" rx="4" fill="rgba(255,255,255,0.5)"/>
-            <rect x="20" y="162" width="200" height="14" rx="4" fill="rgba(255,255,255,0.3)"/>
-            <rect x="20" y="190" width="88" height="28" rx="8" fill="rgba(236,91,19,0.9)"/>
-            <text x="34" y="208" font-family="sans-serif" font-size="10" font-weight="700" fill="white">Get Started →</text>
-            <rect x="120" y="190" width="80" height="28" rx="8" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-            <!-- Floating design card inside browser -->
-            <rect x="380" y="85" width="255" height="180" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(236,91,19,0.2)" stroke-width="1"/>
-            <!-- Mini portfolio grid inside -->
-            <rect x="392" y="96" width="110" height="70" rx="7" fill="rgba(236,91,19,0.15)"/>
-            <circle cx="447" cy="131" r="18" fill="rgba(236,91,19,0.35)"/>
-            <rect x="508" y="96" width="115" height="70" rx="7" fill="rgba(124,58,237,0.2)"/>
-            <rect x="520" y="108" width="92" height="8" rx="3" fill="rgba(255,255,255,0.3)"/>
-            <rect x="520" y="122" width="70" height="6" rx="3" fill="rgba(255,255,255,0.15)"/>
-            <rect x="392" y="174" width="231" height="8" rx="3" fill="rgba(255,255,255,0.1)"/>
-            <rect x="392" y="186" width="180" height="6" rx="3" fill="rgba(255,255,255,0.07)"/>
-            <rect x="392" y="198" width="100" height="22" rx="6" fill="rgba(236,91,19,0.6)"/>
-            <text x="405" y="213" font-family="sans-serif" font-size="9" font-weight="700" fill="white">View Work →</text>
-            <!-- Stats bar inside browser -->
-            <rect x="0" y="276" width="660" height="50" fill="rgba(255,255,255,0.03)" stroke-top="rgba(255,255,255,0.06)"/>
-            <line x1="0" y1="276" x2="660" y2="276" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-            <text x="40" y="296" font-family="sans-serif" font-size="14" font-weight="800" fill="white">100%</text>
-            <text x="30" y="312" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.4)">Client Satisfaction</text>
-            <line x1="170" y1="285" x2="170" y2="315" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-            <text x="195" y="296" font-family="sans-serif" font-size="14" font-weight="800" fill="white">3 Days</text>
-            <text x="190" y="312" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.4)">Avg. Delivery</text>
-            <line x1="330" y1="285" x2="330" y2="315" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-            <text x="360" y="296" font-family="sans-serif" font-size="14" font-weight="800" fill="white">60+</text>
-            <text x="345" y="312" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.4)">Projects Delivered</text>
-            <line x1="490" y1="285" x2="490" y2="315" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-            <text x="515" y="296" font-family="sans-serif" font-size="14" font-weight="800" fill="white">24h</text>
-            <text x="505" y="312" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.4)">Response Time</text>
-            <!-- Packages section inside browser -->
-            <rect x="0" y="326" width="660" height="114" fill="rgba(0,0,0,0.2)"/>
-            <rect x="16" y="338" width="190" height="88" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-            <rect x="22" y="348" width="40" height="40" rx="8" fill="rgba(236,91,19,0.2)"/>
-            <rect x="68" y="350" width="80" height="8" rx="3" fill="rgba(255,255,255,0.4)"/>
-            <rect x="68" y="364" width="60" height="6" rx="3" fill="rgba(255,255,255,0.2)"/>
-            <text x="22" y="406" font-family="sans-serif" font-size="16" font-weight="800" fill="white">₹699</text>
-            <rect x="218" y="338" width="190" height="88" rx="10" fill="rgba(236,91,19,0.12)" stroke="rgba(236,91,19,0.4)" stroke-width="1.5"/>
-            <rect x="224" y="348" width="40" height="40" rx="8" fill="rgba(236,91,19,0.5)"/>
-            <rect x="270" y="350" width="80" height="8" rx="3" fill="rgba(255,255,255,0.5)"/>
-            <rect x="270" y="364" width="60" height="6" rx="3" fill="rgba(255,255,255,0.25)"/>
-            <text x="224" y="406" font-family="sans-serif" font-size="16" font-weight="800" fill="#ec5b13">₹1299</text>
-            <rect x="420" y="338" width="222" height="88" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-            <rect x="428" y="348" width="40" height="40" rx="8" fill="rgba(124,58,237,0.2)"/>
-            <rect x="474" y="350" width="80" height="8" rx="3" fill="rgba(255,255,255,0.4)"/>
-            <rect x="474" y="364" width="60" height="6" rx="3" fill="rgba(255,255,255,0.2)"/>
-            <text x="428" y="406" font-family="sans-serif" font-size="16" font-weight="800" fill="white">₹499</text>
-          </g>
-
-          <!-- ── FLOATING UI CARDS (left/scattered) ── -->
-
-          <!-- Figma-style colour palette card -->
-          <g transform="translate(48, 140)" opacity="0.88">
-            <rect width="200" height="80" rx="12" fill="rgba(20,10,5,0.85)" stroke="rgba(236,91,19,0.2)" stroke-width="1"/>
-            <text x="14" y="22" font-family="sans-serif" font-size="9" font-weight="700" fill="rgba(255,255,255,0.5)">BRAND PALETTE</text>
-            <circle cx="28" cy="48" r="14" fill="#ec5b13"/>
-            <circle cx="60" cy="48" r="14" fill="#ff8f4b"/>
-            <circle cx="92" cy="48" r="14" fill="#1a0d06"/>
-            <circle cx="124" cy="48" r="14" fill="#ffffff" opacity="0.9"/>
-            <circle cx="156" cy="48" r="14" fill="#7c3aed"/>
-            <rect x="14" y="66" width="40" height="5" rx="2" fill="rgba(255,255,255,0.15)"/>
-          </g>
-
-          <!-- Delivery badge -->
-          <g transform="translate(52, 268)" opacity="0.9">
-            <rect width="170" height="56" rx="28" fill="rgba(20,10,5,0.9)" stroke="rgba(40,200,80,0.4)" stroke-width="1.2"/>
-            <circle cx="30" cy="28" r="12" fill="rgba(40,200,80,0.2)"/>
-            <text x="26" y="32" font-family="sans-serif" font-size="12" fill="#4ade80">✓</text>
-            <text x="50" y="22" font-family="sans-serif" font-size="10" font-weight="800" fill="white">Delivered</text>
-            <text x="50" y="38" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.45)">In 3 Days · NDA Signed</text>
-          </g>
-
-          <!-- Client quote bubble -->
-          <g transform="translate(44, 370)" opacity="0.82">
-            <rect width="230" height="90" rx="14" fill="rgba(15,8,4,0.9)" stroke="rgba(236,91,19,0.18)" stroke-width="1"/>
-            <text x="14" y="28" font-family="sans-serif" font-size="10" font-style="italic" fill="rgba(255,255,255,0.65)">"Got the Figma + live site in</text>
-            <text x="14" y="44" font-family="sans-serif" font-size="10" font-style="italic" fill="rgba(255,255,255,0.65)">under 3 days. Absolutely</text>
-            <text x="14" y="60" font-family="sans-serif" font-size="10" font-style="italic" fill="rgba(255,255,255,0.65)">worth every rupee."</text>
-            <circle cx="24" cy="78" r="8" fill="linear-gradient(135deg,#ec5b13,#ff8f4b)"/>
-            <circle cx="24" cy="78" r="8" fill="#ec5b13"/>
-            <text x="22" y="82" font-family="sans-serif" font-size="9" font-weight="800" fill="white">A</text>
-            <text x="38" y="76" font-family="sans-serif" font-size="9" font-weight="700" fill="rgba(255,255,255,0.6)">Ananya · Product Designer</text>
-          </g>
-
-          <!-- Figma-style component frame -->
-          <g transform="translate(60, 510)" opacity="0.75">
-            <rect width="188" height="120" rx="10" fill="rgba(12,6,3,0.8)" stroke="rgba(236,91,19,0.15)" stroke-width="1"/>
-            <text x="10" y="16" font-family="monospace" font-size="8" fill="rgba(124,58,237,0.9)">Frame</text>
-            <rect x="10" y="22" width="168" height="1" fill="rgba(255,255,255,0.06)"/>
-            <!-- Mock components -->
-            <rect x="10" y="30" width="168" height="24" rx="6" fill="rgba(236,91,19,0.2)"/>
-            <text x="20" y="46" font-family="sans-serif" font-size="9" font-weight="700" fill="white">Hero Section</text>
-            <rect x="10" y="60" width="78" height="20" rx="5" fill="rgba(255,255,255,0.06)"/>
-            <text x="18" y="73" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.4)">Nav Bar</text>
-            <rect x="96" y="60" width="82" height="20" rx="5" fill="rgba(255,255,255,0.06)"/>
-            <text x="104" y="73" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.4)">CTA Button</text>
-            <rect x="10" y="86" width="168" height="24" rx="6" fill="rgba(124,58,237,0.15)"/>
-            <text x="20" y="102" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.5)">Services Grid</text>
-            <!-- Figma edit dot -->
-            <circle cx="174" cy="10" r="4" fill="#ec5b13" opacity="0.8"/>
-          </g>
-
-          <!-- Pricing chip floating -->
-          <g transform="translate(620, 680)" opacity="0.8">
-            <rect width="148" height="44" rx="22" fill="rgba(236,91,19,0.15)" stroke="rgba(236,91,19,0.35)" stroke-width="1.2"/>
-            <text x="18" y="20" font-family="sans-serif" font-size="11" font-weight="800" fill="#ff8f4b">Starting</text>
-            <text x="18" y="35" font-family="sans-serif" font-size="14" font-weight="800" fill="white">₹699 only</text>
-          </g>
-
-          <!-- Dots / nodes connecting lines (design-tool feel) -->
-          <g opacity="0.18" stroke="#ec5b13" stroke-width="0.8" fill="none">
-            <line x1="248" y1="180" x2="730" y2="160"/>
-            <line x1="222" y1="296" x2="730" y2="300"/>
-            <line x1="274" y1="415" x2="730" y2="380"/>
-          </g>
-          <g fill="#ec5b13" opacity="0.5">
-            <circle cx="248" cy="180" r="3"/>
-            <circle cx="222" cy="296" r="3"/>
-            <circle cx="274" cy="415" r="3"/>
-          </g>
-
-          <!-- Scattered small dot particles -->
-          <g fill="#ec5b13" opacity="0.4">
-            <circle cx="320" cy="60" r="1.5"/>
-            <circle cx="560" cy="30" r="1"/>
-            <circle cx="680" cy="720" r="2"/>
-            <circle cx="420" cy="760" r="1.5"/>
-            <circle cx="1380" cy="80" r="1.5"/>
-            <circle cx="1400" cy="700" r="2"/>
-            <circle cx="350" cy="700" r="1"/>
-          </g>
-          <g fill="rgba(255,255,255,0.12)">
-            <circle cx="600" cy="650" r="1.5"/>
-            <circle cx="700" cy="740" r="2"/>
-            <circle cx="1300" cy="580" r="1.5"/>
-            <circle cx="1200" cy="700" r="1"/>
-          </g>
-
-          <!-- Bottom fade-out gradient -->
-          <defs>
-            <linearGradient id="bottomFade" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="60%" stop-color="transparent"/>
-              <stop offset="100%" stop-color="#0a0604" stop-opacity="0.7"/>
-            </linearGradient>
-          </defs>
-          <rect width="1440" height="820" fill="url(#bottomFade)"/>
-        </svg>
-      </div>
-      <!-- Dark Overlay -->
+      style="flex:1;display:flex;align-items:center;padding:64px 32px;background:linear-gradient(155deg,#120700 0%,#0d0400 50%,#1a0800 100%);position:relative;overflow:hidden;">
+      <!-- Background Video -->
+      <video id="hero-bg-video" autoplay muted loop playsinline>
+        <source src="15432213-uhd_3840_2160_50fps (1).mp4" type="video/mp4">
+      </video>
+      <!-- Brand-toned warm overlay -->
       <div id="hero-overlay"></div>
       <!-- Particle canvas -->
       <canvas id="hero-canvas"></canvas>
-      <!-- Floating orbs -->
+      <!-- Floating orbs — larger, warmer, more vibrant -->
       <div class="orb"
-        style="width:400px;height:400px;background:radial-gradient(circle,rgba(236,91,19,0.3),transparent);top:-100px;right:-100px;animation-duration:9s;">
+        style="width:520px;height:520px;background:radial-gradient(circle,rgba(236,91,19,0.42),rgba(255,80,0,0.12) 50%,transparent 75%);top:-160px;right:-140px;animation-duration:9s;">
       </div>
       <div class="orb"
-        style="width:300px;height:300px;background:radial-gradient(circle,rgba(255,140,60,0.2),transparent);bottom:-80px;left:-60px;animation-duration:12s;animation-delay:-4s;">
+        style="width:380px;height:380px;background:radial-gradient(circle,rgba(255,140,60,0.28),rgba(200,60,0,0.08) 55%,transparent 80%);bottom:-100px;left:-80px;animation-duration:12s;animation-delay:-4s;">
+      </div>
+      <div class="orb"
+        style="width:250px;height:250px;background:radial-gradient(circle,rgba(255,60,0,0.18),transparent 70%);top:50%;left:15%;animation-duration:15s;animation-delay:-7s;">
       </div>
       <div
         style="max-width:800px;margin:0 auto;width:100%;display:flex;flex-direction:column;align-items:center;text-align:center;">
